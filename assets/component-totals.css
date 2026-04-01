@@ -1,0 +1,99 @@
+/* ============================================
+   COMPONENT-TOTALS.CSS — Totaux & sous-totaux panier
+   ============================================ */
+
+.totals {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.totals__subtotal,
+.totals__total,
+.totals__discount,
+.totals__shipping {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.totals__subtotal,
+.totals__discount,
+.totals__shipping {
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.06);
+}
+
+.totals__subtotal-label,
+.totals__discount-label,
+.totals__shipping-label {
+  color: rgba(var(--color-foreground), 0.7);
+  font-weight: 400;
+}
+
+.totals__subtotal-value,
+.totals__discount-value,
+.totals__shipping-value {
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+}
+
+.totals__discount-value {
+  color: rgb(var(--color-button));
+}
+
+/* ---- Total final ---- */
+.totals__total {
+  padding-top: 1.6rem;
+  margin-top: 0.4rem;
+}
+
+.totals__total-label {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: var(--font-heading-family);
+  color: rgb(var(--color-foreground));
+}
+
+.totals__total-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: rgb(var(--color-foreground));
+}
+
+/* ---- Mention taxe / livraison ---- */
+.tax-note {
+  font-size: 1.2rem;
+  color: rgba(var(--color-foreground), 0.55);
+  text-align: right;
+  margin-top: 0.4rem;
+}
+
+.tax-note a {
+  font-size: inherit;
+  color: inherit;
+}
+
+/* ---- Économies totales ---- */
+.total-saving {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(var(--color-button), 0.08);
+  border-radius: var(--text-boxes-radius);
+  padding: 1rem 1.4rem;
+  margin: 0.8rem 0;
+}
+
+.total-saving__label {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: rgb(var(--color-button));
+}
+
+.total-saving__value {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: rgb(var(--color-button));
+}

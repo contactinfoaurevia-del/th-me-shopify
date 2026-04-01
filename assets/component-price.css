@@ -1,0 +1,89 @@
+/* ============================================
+   COMPONENT-PRICE.CSS — Affichage des prix
+   ============================================ */
+
+.price {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+/* ---- Prix courant ---- */
+.price__regular {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+}
+
+/* ---- Prix soldé ---- */
+.price--on-sale .price__regular {
+  color: rgb(var(--color-button));
+}
+
+/* ---- Prix barré / comparaison ---- */
+.price__compare {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: rgba(var(--color-foreground), 0.55);
+  text-decoration: line-through;
+}
+
+/* ---- Prix "à partir de" ---- */
+.price__label {
+  font-size: 1.2rem;
+  color: rgba(var(--color-foreground), 0.6);
+  font-style: italic;
+}
+
+/* ---- Prix vendu ---- */
+.price--sold-out {
+  color: rgba(var(--color-foreground), 0.45);
+}
+
+/* ---- Badge promotion ---- */
+.price__badge-sale {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+  border-radius: var(--badge-corner-radius);
+  background-color: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
+  text-transform: uppercase;
+  vertical-align: middle;
+  line-height: 1.6;
+}
+
+/* ---- Unité ---- */
+.unit-price-measurement {
+  font-size: 1.1rem;
+  color: rgba(var(--color-foreground), 0.55);
+}
+
+.unit-price-measurement__separator {
+  margin: 0 0.1rem;
+}
+
+/* ---- Bloc prix complet (avec comparaison) ---- */
+.price-item {
+  display: block;
+}
+
+.price-item--regular {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+}
+
+.price-item--sale {
+  color: rgb(var(--color-button));
+}
+
+.price-item--last {
+  color: rgba(var(--color-foreground), 0.55);
+  text-decoration: line-through;
+  font-size: 1.3rem;
+  font-weight: 400;
+}

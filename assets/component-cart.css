@@ -1,0 +1,142 @@
+/* ============================================
+   COMPONENT-CART.CSS — Page panier
+   ============================================ */
+
+.cart {
+  padding-top: 3.6rem;
+}
+
+.cart__warnings {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.cart--empty .cart__warnings {
+  display: flex;
+}
+
+.cart--empty .cart__contents {
+  display: none;
+}
+
+.cart__empty-text {
+  font-size: 1.8rem;
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+  color: rgb(var(--color-foreground));
+  margin-bottom: 2.4rem;
+}
+
+.cart__login-title {
+  font-size: 2rem;
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+  margin-bottom: 1.6rem;
+}
+
+.cart__login-paragraph {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cart__title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  margin-bottom: 2rem;
+}
+
+.cart__title {
+  font-size: calc(var(--font-heading-scale) * 2.6rem);
+  margin: 0;
+}
+
+.cart__items-count {
+  font-size: 1.4rem;
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+/* ---- Layout 2 colonnes sur desktop ---- */
+.cart__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.2rem;
+}
+
+@media screen and (min-width: 990px) {
+  .cart__container {
+    grid-template-columns: 1fr 36rem;
+    gap: 6rem;
+    align-items: start;
+  }
+}
+
+/* ---- Footer / Résumé commande ---- */
+.cart__footer {
+  position: sticky;
+  top: 2rem;
+}
+
+.cart__footer-wrapper {
+  background-color: rgba(var(--color-background-contrast), 0.5);
+  border: 1px solid rgba(var(--color-foreground), 0.08);
+  border-radius: var(--text-boxes-radius);
+  padding: 2.4rem;
+  box-shadow:
+    var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset)
+    var(--text-boxes-shadow-blur-radius)
+    rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+}
+
+.cart__footer-wrapper .cart__ctas {
+  margin-top: 1.6rem;
+}
+
+.cart__ctas .button {
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.cart__checkout-button {
+  font-size: 1.6rem;
+  padding: 1.8rem 3rem;
+}
+
+/* ---- Note de commande ---- */
+.cart__note {
+  margin-top: 2rem;
+}
+
+.cart__note textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+/* ---- Politique de livraison ---- */
+.cart__policies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
+  color: rgba(var(--color-foreground), 0.6);
+  text-align: center;
+}
+
+.cart__policies svg {
+  flex-shrink: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+/* ---- Dynamic payment methods ---- */
+.shopify-payment-button {
+  margin-top: 1rem;
+}

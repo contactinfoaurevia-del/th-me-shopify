@@ -1,0 +1,130 @@
+/* ============================================
+   COMPONENT-DISCOUNTS.CSS — Codes promo & remises
+   ============================================ */
+
+/* ---- Formulaire code promo ---- */
+.coupon-form,
+.discount-form {
+  display: flex;
+  gap: 0.8rem;
+  margin: 1.6rem 0;
+}
+
+.coupon-form__input,
+.discount-form__input {
+  flex: 1;
+  padding: 1rem 1.4rem;
+  font-size: 1.4rem;
+  border: var(--inputs-border-width) solid rgba(var(--color-foreground), var(--inputs-border-opacity));
+  border-radius: var(--inputs-radius);
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  box-shadow:
+    var(--inputs-shadow-horizontal-offset) var(--inputs-shadow-vertical-offset)
+    var(--inputs-shadow-blur-radius) rgba(var(--color-shadow), var(--inputs-shadow-opacity));
+}
+
+.coupon-form__button,
+.discount-form__button {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  background-color: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
+  border: none;
+  border-radius: var(--buttons-radius);
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+.coupon-form__button:hover,
+.discount-form__button:hover {
+  opacity: 0.88;
+}
+
+/* ---- Remises appliquées ---- */
+.discounts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.discounts__discount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  background-color: rgba(var(--color-button), 0.06);
+  border: 1px solid rgba(var(--color-button), 0.2);
+  border-radius: var(--badge-corner-radius);
+  padding: 0.6rem 1rem;
+  font-size: 1.3rem;
+  color: rgb(var(--color-foreground));
+}
+
+.discounts__discount-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: rgb(var(--color-button));
+}
+
+.discounts__discount-label svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  flex-shrink: 0;
+}
+
+.discounts__discount-amount {
+  font-weight: 700;
+  color: rgb(var(--color-button));
+}
+
+.discounts__discount-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(var(--color-foreground), 0.45);
+  padding: 0.2rem;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.discounts__discount-remove:hover {
+  color: rgb(var(--color-foreground));
+}
+
+/* ---- Message d'erreur code promo ---- */
+.coupon-form__error,
+.discount-form__error {
+  font-size: 1.2rem;
+  color: #c00;
+  margin-top: 0.4rem;
+}
+
+/* ---- Remises ligne produit ---- */
+.line-item-discounts {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.line-item-discounts__discount {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgb(var(--color-button));
+  background-color: rgba(var(--color-button), 0.07);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--badge-corner-radius);
+}
